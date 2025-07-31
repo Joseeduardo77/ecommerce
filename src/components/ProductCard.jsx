@@ -1,12 +1,12 @@
-import React from "react";
+import "./ProductCard.css";
 
-function ProductCard({ product, addToCart }) {
+function ProductCard({ produto, addToCart }) {
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
-      <h3>{product.name}</h3>
-      <p className="price">R$ {product.price.toFixed(2)}</p>
-      <button onClick={() => addToCart(product)}>Adicionar ao carrinho</button>
+      <img src={produto.imagem} alt={produto.nome} />
+      <h3>{produto.nome}</h3>
+      <p>R$ {produto.preco}</p>
+      <button onClick={() => addToCart(produto)}>Adicionar ao carrinho</button>
     </div>
   );
 }

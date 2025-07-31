@@ -1,20 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
-function Header({ cartCount, toggleCart }) {
+function Header() {
   return (
     <header className="header">
-      <div className="container header-content">
-        <h1 className="logo">🛍 LojaTop</h1>
-        <nav>
-          <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/produtos">Produtos</a></li>
-          </ul>
-        </nav>
-        <button className="cart-btn" onClick={toggleCart}>
-          🛒 Carrinho ({cartCount})
-        </button>
-      </div>
+      <h1>🛍 LojaTop</h1>
+      <nav>
+        <Link to="/">Início</Link>
+        <Link to="/produtos">Produtos</Link>
+        <Link to="/carrinho">Carrinho</Link>
+      </nav>
     </header>
   );
 }
